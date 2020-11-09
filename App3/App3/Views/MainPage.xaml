@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacebookLogin.Views.MainPage"
+             Title="Facebook Login"
+             BackgroundColor="White">
+    <Grid BackgroundColor="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal" Margin="30,0,30,0">
+            <Image Source="Group_too.png" HorizontalOptions="StartAndExpand"/>
+            <Image Source="Group_three.png" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="0,30,0,0">
+            <Image Source="Recreat.png" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Spacing="20">
+            <ImageButton x:Name="Apple" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="RegistrFromApple.png"/>
+            <ImageButton x:Name="faceBook" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="Facebook.png"/>
+        </StackLayout>
+        <StackLayout Spacing="5" Grid.Row="3">
+            <Label TextColor="#3ABB9A" FontSize="20" Text="Регистрация" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Label TextColor="#000000" FontSize="18" Text="Уже зарегистрированы?"></Label>
+                <Label FontSize="18" TextColor="#3ABB9A" Text="Войти"></Label>
+            </StackLayout>
+            <Label 
+                    WidthRequest="300"
+                    HorizontalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    TextColor="#979494"
+                    FontSize="14"
+                    Text="Продолжая, вы соглашаетесь с нашими Положениями и условиями и Политикой конфиденциальности"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
