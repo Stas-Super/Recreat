@@ -101,8 +101,8 @@
     <AndroidResource Include="Resources\drawable\Recreat.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App3\RecreatMobile.csproj">
-      <Project>{1cebbae7-c626-4c75-aa86-cc31082233d8}</Project>
+    <ProjectReference Include="..\Recreat\RecreatMobile.csproj">
+      <Project>{d26bcb6b-368c-4afb-95f8-cd97cde01e88}</Project>
       <Name>RecreatMobile</Name>
     </ProjectReference>
   </ItemGroup>

@@ -11,7 +11,6 @@ namespace FacebookLogin
         /// https://developers.facebook.com/apps/
         /// </summary>
         private string ClientId = "366838911403878";
-
         public FacebookProfilePage()
         {
             InitializeComponent();
