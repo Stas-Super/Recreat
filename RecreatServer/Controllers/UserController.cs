@@ -11,7 +11,7 @@ namespace RecreatServer.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             return Content("Success");
         }

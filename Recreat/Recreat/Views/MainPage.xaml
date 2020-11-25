@@ -3,38 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FacebookLogin.Views.MainPage"
              Title="Facebook Login"
-             BackgroundColor="White">
-    <Grid BackgroundColor="#F5F5F5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackLayout Grid.Row="0" Orientation="Horizontal" Margin="30,0,30,0">
-            <Image Source="Group_too.png" HorizontalOptions="StartAndExpand"/>
-            <Image Source="Group_three.png" HorizontalOptions="EndAndExpand"/>
-        </StackLayout>
-        <StackLayout Grid.Row="1" Margin="0,30,0,0">
-            <Image Source="Recreat.png" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-        <StackLayout Grid.Row="2" Spacing="20">
-            <ImageButton x:Name="Apple" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="RegistrFromApple.png"/>
-            <ImageButton x:Name="faceBook" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="Facebook.png"/>
-        </StackLayout>
-        <StackLayout Spacing="5" Grid.Row="3">
-            <Label TextColor="#3ABB9A" FontSize="20" Text="Регистрация" HorizontalOptions="CenterAndExpand"/>
-            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                <Label TextColor="#000000" FontSize="18" Text="Уже зарегистрированы?"></Label>
-                <Label FontSize="18" TextColor="#3ABB9A" Text="Войти"></Label>
+             xmlns:gradient="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:renders="clr-namespace:RecreatMobile.Raders">
+    <ContentPage.Content>
+        <renders:GradientPage StartColor="#772844" EndColor="#272844" Mode="BlTr">
+            <StackLayout Margin="0,70,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" Grid.Row="1">
+                <Image Source="Recreat.png" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
-            <Label 
+            <Frame CornerRadius="30" VerticalOptions="EndAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Padding="0,50,0,0" Spacing="40">
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <ImageButton x:Name="Apple" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="RegistrFromApple.png"/>
+                            <ImageButton x:Name="faceBook" WidthRequest="300" HeightRequest="50" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Source="Facebook.png"/>
+                        </StackLayout>
+                        <Label TextColor="#3ABB9A" FontSize="20" Text="Регистрация" HorizontalOptions="CenterAndExpand"/>
+                        <StackLayout>
+                            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                                <Label TextColor="#000000" FontSize="18" Text="Уже зарегистрированы?"></Label>
+                                <Label FontSize="18" TextColor="#3ABB9A" Text="Войти"></Label>
+                            </StackLayout>
+                            <Label 
                     WidthRequest="300"
                     HorizontalTextAlignment="Center"
                     HorizontalOptions="Center"
                     TextColor="#979494"
                     FontSize="14"
                     Text="Продолжая, вы соглашаетесь с нашими Положениями и условиями и Политикой конфиденциальности"/>
-        </StackLayout>
-    </Grid>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </renders:GradientPage>
+    </ContentPage.Content>
 </ContentPage>
