@@ -4,13 +4,16 @@
              x:Class="FacebookLogin.Views.MainPage"
              Title="Facebook Login"
              xmlns:gradient="clr-namespace:MagicGradients;assembly=MagicGradients"
-             xmlns:renders="clr-namespace:RecreatMobile.Raders">
+             xmlns:renders="clr-namespace:RecreatMobile.Raders" xmlns:vm="clr-namespace:RecreatMobile.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <renders:GradientPage StartColor="#772844" EndColor="#272844" Mode="BlTr">
             <StackLayout Margin="0,70,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" Grid.Row="1">
                 <Image Source="Recreat.png" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
-            <Frame CornerRadius="30" VerticalOptions="EndAndExpand">
+            <renders:CustomFrame CornerRadius="30,30,0,0" VerticalOptions="EndAndExpand">
                 <StackLayout Orientation="Vertical">
                     <StackLayout Padding="0,50,0,0" Spacing="40">
                         <StackLayout VerticalOptions="CenterAndExpand">
@@ -21,7 +24,11 @@
                         <StackLayout>
                             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                                 <Label TextColor="#000000" FontSize="18" Text="Уже зарегистрированы?"></Label>
-                                <Label FontSize="18" TextColor="#3ABB9A" Text="Войти"></Label>
+                                <Label FontSize="18" TextColor="#3ABB9A" Text="Войти">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding LoginPageClick}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
                             </StackLayout>
                             <Label 
                     WidthRequest="300"
@@ -33,7 +40,7 @@
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
-            </Frame>
+            </renders:CustomFrame>
         </renders:GradientPage>
     </ContentPage.Content>
 </ContentPage>

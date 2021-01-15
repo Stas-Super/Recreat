@@ -65,6 +65,10 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\EntryRenderer.cs" />
+    <Compile Include="Renderers\CustumFrameRenderer.cs" />
+    <Compile Include="Renderers\TabbedPageRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,12 +127,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App3\RecreatMobile.csproj">
-      <Project>{1cebbae7-c626-4c75-aa86-cc31082233d8}</Project>
+    <ProjectReference Include="..\Recreat\RecreatMobile.csproj">
+      <Project>{d26bcb6b-368c-4afb-95f8-cd97cde01e88}</Project>
       <Name>RecreatMobile</Name>
     </ProjectReference>
   </ItemGroup>
