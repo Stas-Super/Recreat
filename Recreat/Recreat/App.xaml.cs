@@ -2,7 +2,7 @@
 using RecreatMobile.Views;
 using Xamarin.Forms;
 
-namespace App3 {
+namespace RecreatMobile {
     public partial class App : Application
     {
         public App()

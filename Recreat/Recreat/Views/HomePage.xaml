@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:RecreatMobile.Renderers"
+             BackgroundColor="Transparent"
+             Padding="0"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="RecreatMobile.Views.HomePage">
+    <ContentPage.Content>
+        <renderers:GradientPage StartColor="#772844" EndColor="#272844">
+            <StackLayout Margin="0,0,0,5" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Background.png" Margin="0" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="8"/>
+                    <Label Text="Классическая диета" TextColor="White" Grid.Column="1" Grid.RowSpan="2" VerticalTextAlignment="Center"/>
+                    <StackLayout Orientation="Vertical" Grid.Row="3"  Grid.Column="0">
+                        <Label Text="310" HorizontalOptions="Center" TextColor="White"/>
+                        <Label Text="потребление" HorizontalOptions="Center" TextColor="White"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                        <gauge:SfCircularGauge>
+                            <gauge:SfCircularGauge.Headers>
+                                <gauge:Header Text="1200 ккал" Position="0.5,0.5" ForegroundColor="White" VerticalHeaderPosition="Start" />
+                                <gauge:Header Text="осталось" Position="0.5,0.5" ForegroundColor="White" VerticalHeaderPosition="End"/>
+                            </gauge:SfCircularGauge.Headers>
+                            <gauge:SfCircularGauge.Scales>
+                                <gauge:Scale ShowLabels="False" ShowTicks="False" RimThickness="25" RadiusFactor="1" RimColor="White" StartAngle="90" SweepAngle="360" StartValue="0" EndValue="100" Interval="10">
+                                    <gauge:Scale.Pointers>
+                                        <gauge:RangePointer Value="80" Offset="1" Thickness="25" RangeCap="Both" Color="DeepPink"/>
+                                    </gauge:Scale.Pointers>
+                                </gauge:Scale>
+                            </gauge:SfCircularGauge.Scales>
+                        </gauge:SfCircularGauge>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Grid.Row="3"  Grid.Column="2">
+                        <Label Text="310" HorizontalOptions="Center" TextColor="White"/>
+                        <Label Text="расход" HorizontalOptions="Center" TextColor="White"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+            <StackLayout Margin="0,0,0,5" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <ImageButton Margin="30,0,0,0" BackgroundColor="Transparent" HorizontalOptions="Start" Source="Left.png"/>
+                <Label Text="25 ноября" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <ImageButton Margin="0,0,30,0" BackgroundColor="Transparent" HorizontalOptions="End" Source="Right.png"/>
+            </StackLayout>
+            <StackLayout Margin="0,0,0,50" VerticalOptions="CenterAndExpand" Spacing="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#F77191" Offset="0.1"/>
+                            <GradientStop Color="#FD1292" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+            </StackLayout>
+        </renderers:GradientPage>
+    </ContentPage.Content>
+</ContentPage>

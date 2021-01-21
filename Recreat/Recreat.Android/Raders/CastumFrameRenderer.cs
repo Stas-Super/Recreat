@@ -5,8 +5,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using App3.Droid.Raders;
-using RecreatMobile.Raders;
+using RecreatMobile.Droid.Raders;
+using RecreatMobile.Renderers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using FrameRenderer = Xamarin.Forms.Platform.Android.AppCompat.FrameRenderer;
 [assembly: ExportRenderer(typeof(CustomFrame), typeof(CastumFrameRenderer))]
-namespace App3.Droid.Raders
+namespace RecreatMobile.Droid.Raders
 {
     public class CastumFrameRenderer : FrameRenderer
     {

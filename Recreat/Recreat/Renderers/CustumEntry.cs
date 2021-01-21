@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace RecreatMobile.Raderers
+namespace RecreatMobile.Renderers
 {
     public class CustumEntry : Entry
 	{

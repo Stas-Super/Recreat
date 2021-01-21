@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace App3.iOS
+namespace RecreatMobile.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
@@ -23,6 +23,7 @@ namespace App3.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Syncfusion.SfGauge.XForms.iOS.SfGaugeRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
