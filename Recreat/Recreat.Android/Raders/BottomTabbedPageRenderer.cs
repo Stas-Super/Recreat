@@ -6,8 +6,8 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Views;
 using Android.Widget;
-using App3.Droid.Raders;
-using RecreatMobile.Raderers;
+using RecreatMobile.Droid.Raders;
+using RecreatMobile.Renderers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(BottomTabbedPage), typeof(BottomTabbedPageRenderer))]
-namespace App3.Droid.Raders
+namespace RecreatMobile.Droid.Raders
 {
     public class BottomTabbedPageRenderer : TabbedPageRenderer
     {

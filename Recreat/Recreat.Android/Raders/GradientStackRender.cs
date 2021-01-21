@@ -8,16 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using RecreatMobile.Raders;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using App3.Droid.Raders;
+using RecreatMobile.Droid.Raders;
 using Android.Graphics.Drawables;
 using RecreatMobile.Services;
+using RecreatMobile.Renderers;
 
 [assembly: ExportRenderer(typeof(GradientPage), typeof(GradientStackRender))]
 
-namespace App3.Droid.Raders
+namespace RecreatMobile.Droid.Raders
 {
     [Obsolete]
     public class GradientStackRender : VisualElementRenderer<StackLayout>
@@ -52,11 +52,11 @@ namespace App3.Droid.Raders
         protected override void DispatchDraw(global::Android.Graphics.Canvas canvas)
         {
             #region for Vertical Gradient
-            //var gradient = new Android.Graphics.LinearGradient(0, 0, 0, Height,
+            var gradient = new Android.Graphics.LinearGradient(0, 0, 0, Height,
             #endregion
 
             #region for Horizontal Gradient
-            var gradient = new Android.Graphics.LinearGradient(0, 0, Width, 0,
+            //var gradient = new Android.Graphics.LinearGradient(0, 0, Width, 0,
             #endregion
 
                    this.StartColor.ToAndroid(),

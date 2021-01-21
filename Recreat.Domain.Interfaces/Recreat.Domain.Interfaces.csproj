@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Zosh.Infrastructure.Data\Recreat.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
 </Project>

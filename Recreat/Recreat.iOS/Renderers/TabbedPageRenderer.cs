@@ -6,7 +6,7 @@ using System.Text;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
 
-namespace App3.iOS.Renderers
+namespace RecreatMobile.iOS.Renderers
 {
     public class TabbedPageRenderer : TabbedRenderer
     {
