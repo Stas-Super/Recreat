@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(BottomTabbedPage), typeof(BottomTabbedPageRenderer))]
@@ -20,9 +21,10 @@ namespace RecreatMobile.Droid.Raders
 {
     public class BottomTabbedPageRenderer : TabbedPageRenderer
     {
+        private Context ctx;
         public BottomTabbedPageRenderer(Context context) : base(context)
         {
-
+            ctx = context;
         }
 
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
@@ -46,10 +48,50 @@ namespace RecreatMobile.Droid.Raders
             }
 
             tabLayout.ScaleY = viewPager.ScaleY = -1;
-            tabLayout.SetPadding(0, 50, 0, 50);
+            //tabLayout.SetPadding(0, 100, 0, 100);
+            tabLayout.SetMinimumHeight(270);
             tabLayout.Measure(0, 0);
             viewPager.SetPadding(0, -tabLayout.MeasuredHeight, 0, 0);
 
+        }
+
+        [Obsolete]
+        protected override void OnElementChanged(ElementChangedEventArgs<TabbedPage> e)
+        {
+            base.OnElementChanged(e);
+            if(e.NewElement != null)
+            {
+                TabLayout tabLayout = null;
+                for (int i = 0; i < ChildCount; ++i)
+                {
+                    Android.Views.View view = (Android.Views.View)GetChildAt(i);
+                    if (view is TabLayout) tabLayout = (TabLayout)view;
+                }
+                Android.Widget.ImageButton imgButton = new Android.Widget.ImageButton(ctx);
+                imgButton.Click += (sender, args) =>
+                {
+                    ((BottomTabbedPage)e.NewElement).SendCenterButtonClicked();
+                    var command = ((BottomTabbedPage)e.NewElement).Command;
+                    if (command == null) return;
+                    if (command.CanExecute(null))
+                    {
+                        command.Execute(null);
+                    }
+                };
+                imgButton.SetImageResource(Resource.Drawable.TabButton);
+                imgButton.SetBackgroundColor(Android.Graphics.Color.Transparent);
+                var viewgroup = ((ViewGroup)tabLayout.GetChildAt(0));
+                for (int i = 0; i < viewgroup.ChildCount; ++i)
+                {
+                    Android.Views.View view = (Android.Views.View)GetChildAt(i);
+                    if(view != null)
+                    {
+                        view.SetPadding(0, 50, 0, 50);
+                    }
+                }
+                var buttonscount = viewgroup.ChildCount;
+                viewgroup.AddView(imgButton, 2);
+            }
         }
     }
 }

@@ -16,11 +16,11 @@
                 <StackLayout Spacing="25" Orientation="Vertical">
                     <StackLayout Padding="20,0,20,0">
                         <Label Text="Email address" TextColor="Black" Opacity="0.4" Margin="10,0,0,0"/>
-                        <renderers:CustumEntry Margin="10,0,10,0" FontFamily="{StaticResource SF_Pro}"/>
+                        <renderers:CustumEntry Margin="10,0,10,0"/>
                     </StackLayout>
                     <StackLayout Padding="20,0,20,0">
                         <Label Text="Password" Margin="10,0,0,0"/>
-                        <renderers:CustumEntry BorderColor="Black" Margin="10,0,10,0" FontFamily="{StaticResource SF_Pro}"/>
+                        <renderers:CustumEntry BorderColor="Black" Margin="10,0,10,0"/>
                     </StackLayout>
                     <StackLayout Padding="20,0,20,0">
                         <Label TextColor="#272844" Text="Forgot passcode?" Margin="10,0,0,0"/>

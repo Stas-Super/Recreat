@@ -21,5 +21,10 @@ namespace RecreatMobile.Views
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        private void BottomTabbedPage_CenterButtonClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Hello world", "Hello", "ok");
+        }
     }
 }

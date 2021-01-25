@@ -53,7 +53,7 @@
                 <ImageButton Margin="0,0,30,0" BackgroundColor="Transparent" HorizontalOptions="End" Source="Right.png"/>
             </StackLayout>
             <StackLayout Margin="0,0,0,50" VerticalOptions="CenterAndExpand" Spacing="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75">
+                <Button CornerRadius="10" ImageSource="Food.png" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0,1">
                             <GradientStop Color="#F77191" Offset="0.1"/>
@@ -61,9 +61,9 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
-                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
-                <Button CornerRadius="10" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+                <Button ImageSource="Water.png" CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+                <Button ImageSource="Wrokouts.png" CornerRadius="10" WidthRequest="75" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
+                <Button ImageSource="Results.png" CornerRadius="10" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" HeightRequest="75" BackgroundColor="DimGray"/>
             </StackLayout>
         </renderers:GradientPage>
     </ContentPage.Content>

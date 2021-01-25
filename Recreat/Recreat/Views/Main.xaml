@@ -5,13 +5,13 @@
             xmlns:renderers="clr-namespace:RecreatMobile.Renderers"
             xmlns:views="clr-namespace:RecreatMobile.Views"
             BarBackgroundColor="#373856"
+            CenterButtonClicked="BottomTabbedPage_CenterButtonClicked"
             SelectedTabColor="Orange"
             UnselectedTabColor="White"
             BackgroundColor="#272844">
   <!--Pages can be added as references or inline-->
     <views:HomePage  IconImageSource="Main.png"/>
-    <ContentPage  IconImageSource="Statistics.png"/>
-    <ContentPage  IconImageSource="Treanings.png" />
+    <views:Statistics  IconImageSource="Statistics.png"/>
     <ContentPage  IconImageSource="Treanings.png" />
     <ContentPage  IconImageSource="Profile.png" />
 </renderers:BottomTabbedPage>
