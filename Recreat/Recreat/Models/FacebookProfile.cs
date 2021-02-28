@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FacebookLogin.Models
+namespace Recreat.Mobile.Models
 {
     public class FacebookProfile
     {

@@ -5,8 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Recreat.Domain.Core\Recreat.Domain.Core.csproj" />
-    <ProjectReference Include="..\Recreat.Domain.Interfaces\Recreat.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Recreat.Infrastructure.Data\Recreat.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Recreat.Services.Interfaces\Recreat.Services.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

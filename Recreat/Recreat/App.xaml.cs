@@ -1,18 +1,15 @@
 ﻿using FacebookLogin.Views;
-using RecreatMobile.Views;
+using Recreat.Mobile.Views;
 using Xamarin.Forms;
 
-namespace RecreatMobile {
+namespace Recreat.Mobile {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage())
-            {
-                Title = "Facebook Login"
-            };
+            Device.SetFlags(new string[] { "Brush_Experimental" });
+            MainPage = new NavigationPage(new MainPage());
             //MainPage = new NavigationPage(new MainCsPage())
             //{
             //    Title = "Facebook Login"

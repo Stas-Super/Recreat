@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace RecreatMobile.Renderers
+namespace Recreat.Mobile.Renderers
 {
     public class BottomTabbedPage : TabbedPage
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace RecreatMobile.Views
+namespace Recreat.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
@@ -21,5 +21,6 @@ namespace RecreatMobile.Views
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
     }
 }

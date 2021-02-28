@@ -1,10 +1,10 @@
-﻿using RecreatMobile.Services;
+﻿using Recreat.Mobile.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace RecreatMobile.Renderers
+namespace Recreat.Mobile.Renderers
 {
     public class GradientPage : StackLayout
     {

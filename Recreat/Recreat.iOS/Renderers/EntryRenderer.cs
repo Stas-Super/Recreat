@@ -1,6 +1,7 @@
 ﻿using CoreAnimation;
 using Foundation;
-using RecreatMobile.Renderers;
+using Recreat.Mobile.iOS.Renderers;
+using Recreat.Mobile.Renderers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,8 +10,8 @@ using System.Text;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-[assembly: ExportRenderer(typeof(Entry), typeof(EntryRenderer))]
-namespace Recreat.iOS.Renderers
+[assembly: ExportRenderer(typeof(CustumEntry), typeof(CastumEntryRenderer))]
+namespace Recreat.Mobile.iOS.Renderers
 {
     public class CastumEntryRenderer : EntryRenderer
     {

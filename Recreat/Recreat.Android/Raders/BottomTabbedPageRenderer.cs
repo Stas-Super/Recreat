@@ -6,8 +6,8 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Views;
 using Android.Widget;
-using RecreatMobile.Droid.Raders;
-using RecreatMobile.Renderers;
+using Recreat.Mobile.Renderers;
+using Recreat.Droid.Raders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +15,10 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
+using Recreat.Mobile.Droid.Raders;
 
 [assembly: ExportRenderer(typeof(BottomTabbedPage), typeof(BottomTabbedPageRenderer))]
-namespace RecreatMobile.Droid.Raders
+namespace Recreat.Mobile.Droid.Raders
 {
     public class BottomTabbedPageRenderer : TabbedPageRenderer
     {
@@ -51,11 +52,10 @@ namespace RecreatMobile.Droid.Raders
             //tabLayout.SetPadding(0, 100, 0, 100);
             tabLayout.SetMinimumHeight(270);
             tabLayout.Measure(0, 0);
-            viewPager.SetPadding(0, -tabLayout.MeasuredHeight, 0, 0);
+            viewPager.SetPadding(0, Math.Min(-270,-tabLayout.MeasuredHeight), 0, 0);
 
         }
 
-        [Obsolete]
         protected override void OnElementChanged(ElementChangedEventArgs<TabbedPage> e)
         {
             base.OnElementChanged(e);
@@ -83,12 +83,14 @@ namespace RecreatMobile.Droid.Raders
                 var viewgroup = ((ViewGroup)tabLayout.GetChildAt(0));
                 for (int i = 0; i < viewgroup.ChildCount; ++i)
                 {
-                    Android.Views.View view = (Android.Views.View)GetChildAt(i);
+                    Android.Views.View view = viewgroup.GetChildAt(i);
                     if(view != null)
                     {
                         view.SetPadding(0, 50, 0, 50);
                     }
                 }
+                imgButton.SetPadding(0, 50, 0, 0);
+                viewgroup.RemoveViewAt(2);
                 var buttonscount = viewgroup.ChildCount;
                 viewgroup.AddView(imgButton, 2);
             }

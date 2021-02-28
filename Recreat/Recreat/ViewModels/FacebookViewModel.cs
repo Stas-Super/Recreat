@@ -5,10 +5,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using FacebookLogin.Models;
-using FacebookLogin.Services;
+using Recreat.Mobile.Models;
+using Recreat.Mobile.Services;
 
-namespace FacebookLogin.ViewModels
+namespace Recreat.Mobile.ViewModels
 {
     public class FacebookViewModel : INotifyPropertyChanged
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace RecreatMobile.iOS
+namespace Recreat.Mobile.iOS
 {
     public class Application
     {

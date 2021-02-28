@@ -1,20 +1,14 @@
-﻿using System;
+﻿using Recreat.Domain.Core.Base;
+using System;
 
 namespace Recreat.Domain.Core
 {
-    public class User : BaseEntity.BaseEntity<int>
+    public class User : Base.BaseEntity<int>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Female { get; set; }
-        public int Growth { get; set; }
-        public int Weight { get; set; }
-        public DateTime Age { get; set; }
-        public string Goal { get; set; }
-        public int[] Volumes { get; set; }
-        public string Mobility { get; set; }
-        public int CaloriesPerDay { get; set; }
-
-
+        public DateTime Birth { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

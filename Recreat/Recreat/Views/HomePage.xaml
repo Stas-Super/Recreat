@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:renderers="clr-namespace:RecreatMobile.Renderers"
              BackgroundColor="Transparent"
              Padding="0"
-             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             x:Class="RecreatMobile.Views.HomePage">
+             IconImageSource="MainPageIcon.png"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:system="clr-namespace:System;assembly=mscorlib" 
+             xmlns:renderers="clr-namespace:Recreat.Mobile.Renderers"
+             x:Class="Recreat.Mobile.Views.HomePage">
     <ContentPage.Content>
         <renderers:GradientPage StartColor="#772844" EndColor="#272844">
             <StackLayout Margin="0,0,0,5" HorizontalOptions="Fill" VerticalOptions="Fill">
@@ -21,10 +23,11 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Image Source="Background.png" Margin="0" Aspect="AspectFill" Grid.ColumnSpan="3" Grid.RowSpan="8"/>
-                    <Label Text="Классическая диета" TextColor="White" Grid.Column="1" Grid.RowSpan="2" VerticalTextAlignment="Center"/>
-                    <StackLayout Orientation="Vertical" Grid.Row="3"  Grid.Column="0">
-                        <Label Text="310" HorizontalOptions="Center" TextColor="White"/>
-                        <Label Text="потребление" HorizontalOptions="Center" TextColor="White"/>
+                    <Label HorizontalTextAlignment="Center" Text="Классическая диета" TextColor="White" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalTextAlignment="Center"/>
+                    <!--Margin="0,-30,0,0"-->
+                    <StackLayout Spacing="-30" Orientation="Vertical" Grid.Row="2" Grid.RowSpan="2"  Grid.Column="0">
+                        <Label Text="310" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                        <Label Text="потребление" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White"/>
                     </StackLayout>
                     <StackLayout Grid.Row="0" Grid.Column="1">
                         <gauge:SfCircularGauge>
@@ -41,9 +44,9 @@
                             </gauge:SfCircularGauge.Scales>
                         </gauge:SfCircularGauge>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Grid.Row="3"  Grid.Column="2">
-                        <Label Text="310" HorizontalOptions="Center" TextColor="White"/>
-                        <Label Text="расход" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout Spacing="-30" Orientation="Vertical" Grid.Row="2" Grid.RowSpan="2"  Grid.Column="2">
+                        <Label Text="310" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White"/>
+                        <Label Text="расход" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="White"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <renderers:BottomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RecreatMobile.Views.Main"
-            xmlns:renderers="clr-namespace:RecreatMobile.Renderers"
-            xmlns:views="clr-namespace:RecreatMobile.Views"
-            BarBackgroundColor="#373856"
+             x:Class="Recreat.Mobile.Views.Main"
+            xmlns:renderers="clr-namespace:Recreat.Mobile.Renderers"
+            xmlns:views="clr-namespace:Recreat.Mobile.Views" xmlns:views1="clr-namespace:Recreat.Views"
+                            BarBackgroundColor="#373856"
             CenterButtonClicked="BottomTabbedPage_CenterButtonClicked"
             SelectedTabColor="Orange"
             UnselectedTabColor="White"
             BackgroundColor="#272844">
   <!--Pages can be added as references or inline-->
-    <views:HomePage  IconImageSource="Main.png"/>
-    <views:Statistics  IconImageSource="Statistics.png"/>
-    <ContentPage  IconImageSource="Treanings.png" />
-    <ContentPage  IconImageSource="Profile.png" />
+    <!--IconImageSource="Treanings.png"-->
+    <!--IconImageSource="Profile.png" -->
+    <views:HomePage />
+    <views:Statistics/>
+    <ContentPage />
+    <views:Workouts/>
+    <views:Profile/>
 </renderers:BottomTabbedPage>

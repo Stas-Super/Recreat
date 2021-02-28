@@ -1,8 +1,6 @@
-﻿using RecreatMobile.iOS.Renderers;
-using CoreAnimation;
+﻿using CoreAnimation;
 using CoreGraphics;
 using Foundation;
-using RecreatMobile.Renderers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +9,11 @@ using System.Text;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using Recreat.Mobile.iOS.Renderers;
+using Recreat.Mobile.Renderers;
 
 [assembly: ExportRenderer(typeof(CustomFrame), typeof(CustumFrameRenderer))]
-namespace RecreatMobile.iOS.Renderers
+namespace Recreat.Mobile.iOS.Renderers
 {
     public class CustumFrameRenderer : FrameRenderer
     {

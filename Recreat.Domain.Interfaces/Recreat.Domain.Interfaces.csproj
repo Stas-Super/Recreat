@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Zosh.Infrastructure.Data\Recreat.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Recreat.Domain.Core\Recreat.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>

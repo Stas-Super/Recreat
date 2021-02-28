@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using static System.Net.Mime.MediaTypeNames;
-using RecreatMobile;
-using RecreatMobile;
+using Recreat;
 using Xamarin.Forms;
-using RecreatMobile.Views;
+using Recreat.Mobile.Views;
+using Recreat.Mobile.Views;
+using Recreat.Mobile;
 
-namespace RecreatMobile.ViewModels
+namespace Recreat.Mobile.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {

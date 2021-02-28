@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RecreatMobile.Services
+namespace Recreat.Mobile.Services
 {
     public enum GradientColorStackMode
     {

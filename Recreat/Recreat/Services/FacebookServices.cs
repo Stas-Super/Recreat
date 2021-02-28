@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using FacebookLogin.Models;
+using Recreat.Mobile.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace FacebookLogin.Services
+namespace Recreat.Mobile.Services
 {
     public class FacebookServices
     {

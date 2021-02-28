@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using RecreatMobile.Renderers;
-namespace RecreatMobile.Views
+using Recreat.Mobile.Renderers;
+using Recreat.Mobile;
+
+namespace Recreat.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Main : BottomTabbedPage
