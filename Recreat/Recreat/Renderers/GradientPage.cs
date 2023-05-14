@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace RecreatMobile.Raders
+namespace RecreatMobile.Renderers
 {
     public class GradientPage : StackLayout
     {
